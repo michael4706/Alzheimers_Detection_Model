@@ -1,0 +1,37 @@
+{
+    "process_data":
+    {
+        "save_path": "./MFCC/test_4s_denoised_silenceFilter",
+        "data_path": "./data/test_4s_denoised_silenceFilter"
+    },
+    "to_AutoML":
+    {
+        "data_AutoML": "./postman/weka/train_MFCC(segment)_std_wekaFeatSelect.csv",
+        "featName_AutoML": "./postman/weka/weka_MFCC(segment)_featSelect_params.json"
+    },
+    "train_data":
+    {
+        "control_csv": "./MFCC/train_4s_denoised_silenceFilter/Control/Control.csv",
+        "dementia_csv": "./MFCC/train_4s_denoised_silenceFilter/Dementia/Dementia.csv"
+    },
+    "test_data":
+    {
+        "control_csv": "./MFCC/test_4s_denoised_silenceFilter/Control/Control.csv",
+        "dementia_csv": "./MFCC/test_4s_denoised_silenceFilter/Dementia/Dementia.csv"
+    },
+    "model_param":
+    {
+        "model_path": "./model/OEwNOoVtE"
+    },
+    "saving_result_path":
+    {
+        "cm_path_segment": "./results/weka_MFCC_segment/CM(segment).png",
+        "cm_path_person": "./results/weka_MFCC_segment/CM(person).png",
+        "ROC_path_segment": "./results/weka_MFCC_segment/ROC(segment).png",
+        "ROC_path_person": "./results/weka_MFCC_segment/ROC(person).png",
+        "feature_text": "./results/weka_MFCC_segment/selectedFeatureName.txt",
+        "Readme_text":"./results/weka_MFCC_segment/ReadMe.txt",
+        "classification_result_person": "./results/weka_MFCC_segment/result(person).csv",
+        "classification_result_segment": "./results/weka_MFCC_segment/result(segment).csv"
+    }
+}

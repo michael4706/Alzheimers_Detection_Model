@@ -1,0 +1,34 @@
+{
+    "process_data":
+    {
+        "save_path": "./MFCC/test_full_denoised_silenceFilter",
+        "data_path": "./data/test_full_denoised_silenceFilter"
+    },
+    "to_AutoML":
+    {
+        "data_AutoML": "./postman/weka/train_MFCC(person)_std_wekaFeatSelect.csv",
+        "featName_AutoML": "./postman/weka/weka_MFCC(person)_featSelect_params.json"
+    },
+    "train_data":
+    {
+        "control_csv": "./MFCC/train_full_denoised_silenceFilter/Control/Control.csv",
+        "dementia_csv": "./MFCC/train_full_denoised_silenceFilter/Dementia/Dementia.csv"
+    },
+    "test_data":
+    {
+        "control_csv": "./MFCC/test_full_denoised_silenceFilter/Control/Control.csv",
+        "dementia_csv": "./MFCC/test_full_denoised_silenceFilter/Dementia/Dementia.csv"
+    },
+    "model_param":
+    {
+        "model_path": "./model/5lDB6n3h6"
+    },
+    "saving_result_path":
+    {
+        "cm_path_person": "./results/weka_MFCC_person/CM(person).png",
+        "ROC_path_person": "./results/weka_MFCC_person/ROC(person).png",
+        "feature_text": "./results/weka_MFCC_person/selectedFeatureName.txt",
+        "Readme_text":"./results/weka_MFCC_person/ReadMe.txt",
+        "classification_result_person": "./results/weka_MFCC_person/result(person).csv"
+    }
+}
