@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import sys
+sys.path.append("./src")
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier

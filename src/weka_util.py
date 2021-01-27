@@ -43,12 +43,14 @@ def plot_confusion(df, save_path):
     plt.xlabel("True label")
     plt.ylabel("Predicted label")
     plt.savefig(os.path.join(save_path))
+    plt.clf()
     
 def plot_roc_segment(model, test_X, test_y, save_path):
     metrics.plot_roc_curve(model, test_X,  test_y, name = "HC vs. AD")
     plt.plot([0, 1], [0, 1], linestyle='--', lw=2, color='r',label='Chance', alpha=.8)
     plt.title("ROC curve(Segment)")
     plt.savefig(os.path.join(save_path))
+    plt.clf()
     
 def plot_roc_person(df, save_path):
     lw =2
@@ -66,6 +68,7 @@ def plot_roc_person(df, save_path):
     plt.title('ROC Curve(Person)')
     plt.legend(loc="lower right")
     plt.savefig(os.path.join(save_path))
+    plt.clf()
     
 def plot_roc_person_fromSeg(df, save_path):
     fpr, tpr, thres = roc_curve(df["label"].values, 
@@ -82,3 +85,4 @@ def plot_roc_person_fromSeg(df, save_path):
     plt.title('ROC Curve(Person)')
     plt.legend(loc="lower right")
     plt.savefig(os.path.join(save_path))
+    plt.clf()
